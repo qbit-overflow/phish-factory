@@ -21,20 +21,12 @@ terraform {
 
 
 
-provider "docker" {
-  host = "npipe:////.//pipe//docker_engine"
-}
-
-provider "azurerm" {
-  features {}
-}
-
 resource "azurerm_resource_group" "rg" {
   name     = var.resource_group_name
   location = "eastus"
 
   tags = {
-    Enviormen = "Phish Farm"
+    Enviorment = "Phish Farm"
     Team = "DevOps"
   }
 }
